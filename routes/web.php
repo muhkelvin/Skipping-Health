@@ -23,7 +23,7 @@ Route::get('/profile', [UserProfileController::class, 'show'])->name('profile.sh
 Route::put('/profile', [UserProfileController::class, 'update'])->name('profile.update');
 
 // Skipping record routes
-Route::get('/skipping', [SkippingRecordController::class, 'index'])->name('skipping.index');
+Route::get('/', [SkippingRecordController::class, 'index'])->name('skipping.index');
 Route::get('/skipping/create', [SkippingRecordController::class, 'create'])->name('skipping.create');
 Route::post('/skipping', [SkippingRecordController::class, 'store'])->name('skipping.store');
 Route::get('/skipping/{id}', [SkippingRecordController::class, 'show'])->name('skipping.show');
