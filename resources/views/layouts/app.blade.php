@@ -26,25 +26,11 @@
         <!-- Navbar Items -->
         <div class="hidden md:flex md:items-center space-x-8" id="navbarNav">
             <ul class="flex space-x-6 font-medium">
-                @guest
-                    <li><a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('login') }}">Login</a></li>
-                    <li><a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('register') }}">Register</a></li>
-                @else
                     <li><a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('profile.show') }}">Profile</a></li>
                     <li><a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('skipping.index') }}">Skipping Records</a></li>
                     <li><a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('health-impacts.index') }}">Health Impacts</a></li>
                     <li><a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('goals.index') }}">Fitness Goals</a></li>
                     <li><a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('achievements.index') }}">Achievements</a></li>
-                    <li>
-                        <a class="text-gray-600 hover:text-blue-600 transition duration-200" href="{{ route('logout') }}"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
-                            @csrf
-                        </form>
-                    </li>
-                @endguest
             </ul>
         </div>
     </div>
